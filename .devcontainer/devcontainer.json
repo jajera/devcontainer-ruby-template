@@ -1,0 +1,48 @@
+{
+  "name": "Ruby Development Container Template",
+  "dockerFile": "Dockerfile",
+
+  "customizations": {
+    "settings": {
+      "files.eol": "\n",
+      "editor.formatOnSave": true,
+      "remote.extensionKind": {
+        "ms-azuretools.vscode-docker": "workspace"
+      }
+    },
+    "vscode": {
+      "extensions": [
+        "davidanson.vscode-markdownlint",
+        "EditorConfig.EditorConfig",
+        "esbenp.prettier-vscode",
+        "foxundermoon.shell-format",
+        "Gruntfuggly.todo-tree",
+        "mhutchie.git-graph",
+        "ms-azuretools.vscode-docker",
+        "Shopify.ruby-lsp",
+        "streetsidesoftware.code-spell-checker",
+        "usernamehw.errorlens",
+        "vscode-icons-team.vscode-icons"
+      ],
+      "settings": {
+        "rubyLsp.rubyVersionManager": {
+          "identifier": "none"
+        },
+        "rubyLsp.formatter": "none",
+        "rubyLsp.enabledFeatures": {
+          "diagnostics": false,
+          "formatting":  false
+        },
+        "workbench.iconTheme": "vscode-icons"
+      }
+    }
+  },
+
+  "postCreateCommand": ".devcontainer/scripts/postCreate.sh",
+
+  // Use 'forwardPorts' to make a list of ports inside the container available locally.
+  // "forwardPorts": [],
+
+  // Uncomment to connect as root instead. More info: https://aka.ms/dev-containers-non-root.
+  "remoteUser": "root"
+}
